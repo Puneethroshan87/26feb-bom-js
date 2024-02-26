@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+    <script>
+
+g=document.createElement("h1");
+g.innerText="Registered Your Details";
+document.body.appendChild(g);
+
+
+     var b=document.createElement("button");
+     b.innerText="Register";
+     document.body.appendChild(b);
+     b.style.backgroundColor="yellowgreen"
+        b.style.color="white"
+        b.style.height="40px"
+        b.style.fontSize="30px"
+        b.style.borderRadius="40px"
+        // b.setAttribute("style","box-shadow:10px 10px 10px grey")
+     b.addEventListener("click",()=>{
+        username=prompt("enter user name");
+        password=prompt("enter password");
+        email=prompt("enter email");
+        mothername=prompt("enter your mothername");
+        window.localStorage.setItem("username",username);
+        window.localStorage.setItem("password",password);
+        window.localStorage.setItem("email",email);
+        window.localStorage.setItem("mothername",mothername);
+     })
+
+     var c=document.createElement("button");
+        c.innerText=" user details";
+        document.body.appendChild(c);
+        c.style.marginLeft="100px"
+        c.style.marginTop="100px"
+        c.style.backgroundColor="black"
+        c.style.color="white"
+        c.style.height="40px"
+        c.style.fontSize="30px"
+        c.style.borderRadius="40px"
+        // c.setAttribute("style","box-shadow:10px 10px 10px grey")
+        c.addEventListener("click",()=>{
+          window.location.assign("./userdetails.html");
+        })
+
+
+
+
+    </script>
+    
+</body>
+</html>

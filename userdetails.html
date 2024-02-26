@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        border: 3px solid green;
+
+    }
+    td{
+        border: 2px solid red
+    }
+</style>
+<body>
+    <script>
+g=document.createElement("h1");
+g.innerText="Registered Details";
+document.body.appendChild(g);
+var t=document.createElement("table");
+document.body.appendChild(t);
+
+var tr1=document.createElement("tr");
+td1=document.createElement("td");
+td1.innerText="username"
+t.appendChild(tr1);
+tr1.appendChild(td1);
+td2=document.createElement("td")
+td2.innerHTML=window.localStorage.getItem("username");
+tr1.appendChild(td2);
+
+tr2=document.createElement("tr");
+td1=document.createElement("td"); 
+td1.innerText="email";
+tr2.appendChild(td1);
+td2=document.createElement("td");
+tr2.appendChild(td2);
+t.appendChild(tr2);
+td2.innerHTML=window.localStorage.getItem("email");
+
+
+tr3=document.createElement("tr");
+td1=document.createElement("td"); 
+td1.innerText="mothername";
+tr3.appendChild(td1);
+td2=document.createElement("td");
+tr3.appendChild(td2);
+t.appendChild(tr3);
+td2.innerHTML=window.localStorage.getItem("mothername");
+
+
+tr4=document.createElement("tr");
+td1=document.createElement("td"); 
+td1.innerText="password";
+tr4.appendChild(td1);
+td2=document.createElement("td");
+tr4.appendChild(td2);
+t.appendChild(tr4);
+td2.innerHTML=window.localStorage.getItem("password");
+
+
+    </script>
+</body>
+</html>
